@@ -1,6 +1,7 @@
-package nopCommerceUI;
+package nopCommercePageObjects;
 
 import com.AbstractPage;
+import nopCommercePageUI.RegisterPageUI;
 import org.openqa.selenium.WebDriver;
 
 public class RegisterPageObject extends AbstractPage {
@@ -9,11 +10,11 @@ public class RegisterPageObject extends AbstractPage {
         this.driver=driver;
     }
     public void clickRegisterButton() {
-        waitForElementClickable(driver,RegisterPageUI.REGISTER_BUTTON);
+        waitForElementClickable(driver, RegisterPageUI.REGISTER_BUTTON);
         clickToElement(driver,RegisterPageUI.REGISTER_BUTTON);
     }
     public boolean isSuccessMessageDisplay() {
-        waitForElementVisible(driver,RegisterPageUI.MESSAGE);
-        return isElementDisplayed(driver,RegisterPageUI.MESSAGE);
+        waitForElementVisible(driver,RegisterPageUI.REGISTER_SUCCESS_MESSAGE);
+        return isElementDisplayed(driver,RegisterPageUI.REGISTER_SUCCESS_MESSAGE);
     }
 }

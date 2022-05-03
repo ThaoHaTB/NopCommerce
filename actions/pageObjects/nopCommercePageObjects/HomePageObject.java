@@ -1,6 +1,7 @@
-package nopCommerceUI;
+package nopCommercePageObjects;
 
 import com.AbstractPage;
+import nopCommercePageUI.HomePageUI;
 import org.openqa.selenium.WebDriver;
 
 public class HomePageObject extends AbstractPage {

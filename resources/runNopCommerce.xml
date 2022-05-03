@@ -6,13 +6,15 @@
         <parameter name="browser" value="chrome"></parameter>
         <classes>
             <class name="nopCommerceTestcases.Register">
-            </class>
-        </classes>
-    </test>
+             </class>
+             <class name="nopCommerceTestcases.Login">
+             </class>
+         </classes>
+     </test>
 
-    <listeners>
-        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
-        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
-        <listener class-name="reportConfig.ReportNGListener"/>
-    </listeners>
-</suite>
+     <listeners>
+         <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+         <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+         <listener class-name="reportConfig.ReportNGListener"/>
+     </listeners>
+ </suite>

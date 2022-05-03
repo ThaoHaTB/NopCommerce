@@ -1,4 +1,4 @@
-package nopCommerceUI;
+package nopCommercePageUI;
 
 public class HomePageUI {
     public static final String HOMEPAGE_SLIDE="//div[@id='nivo-slider']";

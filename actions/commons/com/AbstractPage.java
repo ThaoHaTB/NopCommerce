@@ -427,48 +427,48 @@ public class AbstractPage {
 
     //nopcommerce
     public void sendKeyToDynamicTextbox(WebDriver driver, String textbox_id, String inputValue) {
-        waitForElementVisible(driver, nopCommerceUI.AbstractPageUI.DYNAMIC_TEXT_BOX, textbox_id);
-        sendKeyToElement(driver, nopCommerceUI.AbstractPageUI.DYNAMIC_TEXT_BOX, inputValue, textbox_id);
+        waitForElementVisible(driver, nopCommercePageUI.AbstractPageUI.DYNAMIC_TEXT_BOX, textbox_id);
+        sendKeyToElement(driver, nopCommercePageUI.AbstractPageUI.DYNAMIC_TEXT_BOX, inputValue, textbox_id);
     }
 
-    public void clickToDynamicButton(WebDriver driver, String buuttonText) {
-        waitForElementClickable(driver, nopCommerceUI.AbstractPageUI.DYNAMIC_BUTTON, buuttonText);
-        clickToElement(driver, nopCommerceUI.AbstractPageUI.DYNAMIC_BUTTON, buuttonText);
+    public void clickOnDynamicButton(WebDriver driver, String buuttonText) {
+        waitForElementClickable(driver, nopCommercePageUI.AbstractPageUI.DYNAMIC_BUTTON, buuttonText);
+        clickToElement(driver, nopCommercePageUI.AbstractPageUI.DYNAMIC_BUTTON, buuttonText);
     }
 
-    public void clickToDynamicRadioButton(WebDriver driver, String label) {
-        waitForElementClickable(driver, nopCommerceUI.AbstractPageUI.DYNAMIC_RADIO_BUTTON, label);
-        clickToElement(driver, nopCommerceUI.AbstractPageUI.DYNAMIC_RADIO_BUTTON, label);
+    public void clickOnDynamicRadioButton(WebDriver driver, String label) {
+        waitForElementClickable(driver, nopCommercePageUI.AbstractPageUI.DYNAMIC_RADIO_BUTTON, label);
+        clickToElement(driver, nopCommercePageUI.AbstractPageUI.DYNAMIC_RADIO_BUTTON, label);
     }
 
     public void selectDynamicDropdowlist(WebDriver driver, String name, String valueSlect) {
-        waitForElementVisible(driver, nopCommerceUI.AbstractPageUI.DYNAMIC_SELECT, name);
-        selectDropdownByText(driver, nopCommerceUI.AbstractPageUI.DYNAMIC_SELECT, valueSlect, name);
+        waitForElementVisible(driver, nopCommercePageUI.AbstractPageUI.DYNAMIC_SELECT, name);
+        selectDropdownByText(driver, nopCommercePageUI.AbstractPageUI.DYNAMIC_SELECT, valueSlect, name);
     }
 
     public boolean isRadioButtonSelectCorrectly(WebDriver driver, String label) {
-        waitForElementVisible(driver, nopCommerceUI.AbstractPageUI.DYNAMIC_RADIO_BUTTON, label);
-        return isElementDisplayed(driver, nopCommerceUI.AbstractPageUI.DYNAMIC_RADIO_BUTTON, label);
+        waitForElementVisible(driver, nopCommercePageUI.AbstractPageUI.DYNAMIC_RADIO_BUTTON, label);
+        return isElementDisplayed(driver, nopCommercePageUI.AbstractPageUI.DYNAMIC_RADIO_BUTTON, label);
     }
 
     public boolean isTextboxloadCorrectly(WebDriver driver, String textbox_id, String valueInput) {
-        waitForElementVisible(driver, nopCommerceUI.AbstractPageUI.DYNAMIC_TEXT_BOX, textbox_id);
+        waitForElementVisible(driver, nopCommercePageUI.AbstractPageUI.DYNAMIC_TEXT_BOX, textbox_id);
 
-        return getElement(driver, nopCommerceUI.AbstractPageUI.DYNAMIC_TEXT_BOX, textbox_id).getAttribute("value").equals(valueInput);
+        return getElement(driver, nopCommercePageUI.AbstractPageUI.DYNAMIC_TEXT_BOX, textbox_id).getAttribute("value").equals(valueInput);
     }
 
     public boolean isSelectLoadCorrectly(WebDriver driver, String name, String valueSelect) {
-        waitForElementVisible(driver, nopCommerceUI.AbstractPageUI.DYNAMIC_SELECT, name);
-        return getSelectedItemDropdown(driver, nopCommerceUI.AbstractPageUI.DYNAMIC_SELECT, name).getText().equals(valueSelect);
+        waitForElementVisible(driver, nopCommercePageUI.AbstractPageUI.DYNAMIC_SELECT, name);
+        return getSelectedItemDropdown(driver, nopCommercePageUI.AbstractPageUI.DYNAMIC_SELECT, name).getText().equals(valueSelect);
     }
 
     public void clickOnDymanicMenuLink(WebDriver driver, String pageName) {
-        waitForElementVisible(driver, nopCommerceUI.AbstractPageUI.HEADER_LINK, pageName);
-        clickToElement(driver, nopCommerceUI.AbstractPageUI.HEADER_LINK, pageName);
+        waitForElementVisible(driver, nopCommercePageUI.AbstractPageUI.HEADER_LINK, pageName);
+        clickToElement(driver, nopCommercePageUI.AbstractPageUI.HEADER_LINK, pageName);
     }
 
     public boolean isErrorMessageDisplay(WebDriver driver, String errorID, String message){
-        waitForElementVisible(driver, nopCommerceUI.AbstractPageUI.ERROR_MESSAGE,errorID);
-        return getElement(driver, nopCommerceUI.AbstractPageUI.ERROR_MESSAGE,errorID).getText().equals(message);
+        waitForElementVisible(driver, nopCommercePageUI.AbstractPageUI.ERROR_MESSAGE,errorID);
+        return getElement(driver, nopCommercePageUI.AbstractPageUI.ERROR_MESSAGE,errorID).getText().equals(message);
     }
 }

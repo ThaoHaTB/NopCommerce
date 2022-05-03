@@ -35,15 +35,7 @@
         </layout>
     </appender>
 
-    <category name="nopComerceFactory.Register_Log">
-        <priority value="all" />
-        <appender-ref ref="console" />
-        <appender-ref ref="logfile" />
-        <appender-ref ref="file" />
-        <appender-ref ref="testng" />
-    </category>
-
-    <category name="nopCommerce.Register">
+    <category name="nopCommerceTestcases.Register">
         <priority value="all" />
         <appender-ref ref="console" />
         <appender-ref ref="logfile" />

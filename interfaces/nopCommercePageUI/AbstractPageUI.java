@@ -1,4 +1,4 @@
-package nopCommerceUI;
+package nopCommercePageUI;
 
 public class AbstractPageUI {
     //Header link
@@ -6,7 +6,7 @@ public class AbstractPageUI {
     //Text box
     public static final String DYNAMIC_TEXT_BOX="//input[@id='%s']";
     //button
-    public static final String DYNAMIC_BUTTON="//button[@id='%s']";
+    public static final String DYNAMIC_BUTTON="//button[text()='%s']";
     //radio button
     public static final String DYNAMIC_RADIO_BUTTON="//label[text()='%s']/../input";
     // Dropdown list
