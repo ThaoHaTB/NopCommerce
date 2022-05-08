@@ -44,14 +44,14 @@ public class Login extends BaseTest {
         log.info("Step 02: Click on Login button");
         loginPage.clickOnDynamicButton(driver,"Log in");
 
-        log.info("Step 03: Verify error mesage is displayed");
-        loginPage.isErrorMessageDisplay(driver,"Email-error","Wrong email");
+        log.info("Step 03: Verify error message is displayed");
+        verifyTrue(loginPage.isErrorMessageDisplay(driver,"Email-error","Wrong email"));
     }
 
     @Test
     public void TC_03_Login_With_Not_Register_Email(){
         log.info("Step 01: Input email to Email text box");
-        loginPage.sendKeyToDynamicTextbox(driver,"Email","hathaok37cntt@gmail.com");
+        loginPage.sendKeyToDynamicTextbox(driver,"Email","123cntt@gmail.com");
 
         log.info("Step 02: Input password to Password text box");
         loginPage.sendKeyToDynamicTextbox(driver,"Password","Abcd@gmail.com");
@@ -59,7 +59,9 @@ public class Login extends BaseTest {
         log.info("Step 03: Click on Login button");
         loginPage.clickOnDynamicButton(driver,"Log in");
 
-        verifyTrue(loginPage.isValidEmailErrorMessageDisplay("Login was unsuccessful. Please correct the errors and try again."));
+        log.info("Step 04: Verify error message display");
+        verifyTrue(loginPage.isValidEmailErrorMessageDisplay("Login was unsuccessful. Please correct the errors and try again.\n" +
+                "No customer account found"));
     }
 
     @Test

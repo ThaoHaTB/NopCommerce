@@ -84,7 +84,7 @@ public class Register extends BaseTest {
         registerPage.clickOnDynamicButton(driver,"Register");
 
         log.info("Step 08: Verify successful message is displayed");
-        Assert.assertTrue(registerPage.isSuccessMessageDisplay());
+        verifyTrue(registerPage.isSuccessMessageDisplay());
 
         log.info("Step 09: Logout");
         registerPage.clickOnDymanicMenuLink(driver,"Log out");
@@ -114,7 +114,7 @@ public class Register extends BaseTest {
         registerPage.clickOnDynamicButton(driver,"Register");
 
         log.info("Step 8: Verify invalid email error message is displayed");
-        registerPage.isElementDisplayed(driver, RegisterPageUI.INVALID_EMAIL_ERROR_MESSAGE);
+        verifyTrue(registerPage.isElementDisplayed(driver, RegisterPageUI.INVALID_EMAIL_ERROR_MESSAGE));
 
     }
 
