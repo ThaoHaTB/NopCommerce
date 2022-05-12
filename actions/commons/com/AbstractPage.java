@@ -428,6 +428,7 @@ public class AbstractPage {
     //nopcommerce
     public void sendKeyToDynamicTextbox(WebDriver driver, String textbox_id, String inputValue) {
         waitForElementVisible(driver, nopCommercePageUI.AbstractPageUI.DYNAMIC_TEXT_BOX, textbox_id);
+        getElement(driver,nopCommercePageUI.AbstractPageUI.DYNAMIC_TEXT_BOX, textbox_id).clear();
         sendKeyToElement(driver, nopCommercePageUI.AbstractPageUI.DYNAMIC_TEXT_BOX, inputValue, textbox_id);
     }
 

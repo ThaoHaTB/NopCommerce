@@ -9,6 +9,8 @@
              </class>
              <class name="nopCommerceTestcases.Login">
              </class>
+            <class name="nopCommerceTestcases.MyAccount">
+            </class>
          </classes>
      </test>
 
