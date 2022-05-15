@@ -8,9 +8,7 @@ import nopCommercePageObjects.PageGeneratorManager;
 import nopCommercePageObjects.RegisterPageObject;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 public class Login extends BaseTest {
     WebDriver driver;
@@ -24,11 +22,11 @@ public class Login extends BaseTest {
         log.info("Precondition-Step 02: Verify Home page is displayed");
         homePage=new HomePageObject(driver);
         Assert.assertTrue(homePage.isSliderDisplay());
-
         log.info("Precondition- Step 03: Go to Login Page");
         homePage.clickOnDymanicMenuLink(driver,"Log in");
         loginPage=new LoginPageObject(driver);
     }
+
     @Test
     public void TC_01_Login_With_Empty_Data(){
         log.info("Step 01: Click on Login button");
@@ -95,6 +93,7 @@ public class Login extends BaseTest {
     }
     @Test
     public void TC_06_Login_Successfully(){
+
         log.info("Step 01: Input email to Email text box");
         loginPage.sendKeyToDynamicTextbox(driver,"Email",GlobalConstants.email);
 
@@ -107,5 +106,10 @@ public class Login extends BaseTest {
         log.info("Step 04: Verify Home Page is display");
         homePage= PageGeneratorManager.getHomePage(driver);
         verifyTrue(homePage.isSliderDisplay());
+    }
+
+    @AfterClass
+    public void closeBrowser(){
+        driver.close();
     }
 }

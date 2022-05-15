@@ -2,6 +2,8 @@ package com;
 
 import java.util.List;
 import java.util.Set;
+
+import nopCommercePageUI.AbstractPageUI;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -49,9 +51,9 @@ public class AbstractPage {
         alert.sendKeys(value);
     }
 
-    public void getAlertText(WebDriver driver){
+    public String getAlertText(WebDriver driver){
         alert=waitForAlertPresence(driver);
-        alert.getText();
+        return alert.getText();
     }
 
     public void swichToWindowByID(WebDriver driver, String parentID){
@@ -466,6 +468,11 @@ public class AbstractPage {
     public void clickOnDymanicMenuLink(WebDriver driver, String pageName) {
         waitForElementVisible(driver, nopCommercePageUI.AbstractPageUI.HEADER_LINK, pageName);
         clickToElement(driver, nopCommercePageUI.AbstractPageUI.HEADER_LINK, pageName);
+    }
+
+    public void clickOnCategoryMenuLink(WebDriver driver, String categoryName) {
+        waitForElementVisible(driver, AbstractPageUI.CATEGORY_MENU, categoryName);
+        clickToElement(driver, nopCommercePageUI.AbstractPageUI.CATEGORY_MENU, categoryName);
     }
 
     public boolean isErrorMessageDisplay(WebDriver driver, String errorID, String message){

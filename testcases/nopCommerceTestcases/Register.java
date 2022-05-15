@@ -153,4 +153,8 @@ public class Register extends BaseTest {
         Random generator = new Random();
         return "hathaok37cntt+"+generator.nextInt()+"@gmail.com";
     }
+    @AfterClass
+    public void closeBrowser(){
+        driver.close();
+    }
 }

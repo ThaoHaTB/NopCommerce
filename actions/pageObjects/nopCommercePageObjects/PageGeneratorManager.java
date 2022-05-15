@@ -9,7 +9,6 @@ public class PageGeneratorManager {
     public static LoginPageObject loginPage;
     private PageGeneratorManager(){
     }
-
     public static HomePageObject getHomePage(WebDriver driver){
         return (homePage == null) ? homePage = new HomePageObject(driver) : homePage;
     }

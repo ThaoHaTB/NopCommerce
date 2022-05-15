@@ -23,6 +23,7 @@ public class BaseTest {
     String projectPath = System.getProperty("user.dir");
     protected BaseTest() {
         log= LogFactory.getLog(getClass());
+
     }
     public enum BROWSER {
         CHROME, FIREFOX, IE, SAFARI, EDGE, CHEADLESS, FHEADLESS;

@@ -13,4 +13,9 @@ public class AbstractPageUI {
     public static final String DYNAMIC_SELECT="//select[@name='%s']";
     // Error message
     public static final String ERROR_MESSAGE="//span[@id='%s']";
+    // Category menu
+    public  static final String CATEGORY_MENU="//div[@class='listbox']//li/a[text()='%s']";
+    // Info
+    public  static final String INFO="//ul[@class='info']/li[@class='%s']";
+
 }
