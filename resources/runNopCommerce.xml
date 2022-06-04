@@ -5,11 +5,7 @@
     <test verbose="2" preserve-order="true" name="Run on Chrome">
         <parameter name="browser" value="chrome"></parameter>
         <classes>
-            <class name="nopCommerceTestcases.Register">
-             </class>
-             <class name="nopCommerceTestcases.Login">
-             </class>
-            <class name="nopCommerceTestcases.MyAccount">
+            <class name="nopCommerceTestcases.Search">
             </class>
 
          </classes>

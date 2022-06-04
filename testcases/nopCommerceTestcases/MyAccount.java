@@ -100,7 +100,7 @@ public class MyAccount extends BaseTest {
         verifyTrue(myAccountPage.getElementText(driver,AbstractPageUI.INFO,"email").split(":")[1].trim().equals(address.getEmail()));
         verifyTrue(myAccountPage.getElementText(driver,AbstractPageUI.INFO,"phone").split(":")[1].trim().equals(address.getPhoneNumber()));
         verifyTrue(myAccountPage.getElementText(driver,AbstractPageUI.INFO,"fax").split(":")[1].trim().equals(address.getFaxNumber()));
-        verifyTrue(myAccountPage.getElementText(driver,AbstractPageUI.INFO,"company").equals(address.getCompany()));
+        verifyTrue(myAccountPage.getElementText(driver,AbstractPageUI.INFO,"company").trim().equals(address.getCompany()));
         verifyTrue(myAccountPage.getElementText(driver,AbstractPageUI.INFO,"address1").equals(address.getAddress1()));
         verifyTrue(myAccountPage.getElementText(driver,AbstractPageUI.INFO,"address2").equals(address.getAddress2()));
         verifyTrue(myAccountPage.getElementText(driver,AbstractPageUI.INFO,"city-state-zip").equals(address.getCity()+", "+address.getZipcode()));
